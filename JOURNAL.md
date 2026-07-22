@@ -28,3 +28,17 @@ PathReview passes user-supplied resume text through `PromptDefense.sanitize()` i
 - **Success criteria:** Malicious prompt-boundary newlines are neutralized, ordinary multiline resume formatting is retained, sanitization remains idempotent, and the safety unit tests pass.
 
 The setup and cohort-ledger boxes will be checked only after those external steps have been completed and verified.
+
+## Week 8 — Reproduction & solution planning
+
+**Reproduction commit link:** [Issue #64 reproduction commit](https://github.com/Neptuneaswol/pathreview/commit/REPLACE_WITH_REPRODUCTION_COMMIT_SHA)
+
+**Reproduction summary:**
+I reproduced the issue by passing resume text containing `\n---\n` and `\nSystem:` prompt boundaries to `PromptDefense.sanitize()` in `safety/prompt_defense.py`. The returned text still contains both malicious newline sequences, confirming that detection recognizes these patterns but sanitization does not neutralize them.
+
+**PLAN.md link:** [Issue #64 solution plan](https://github.com/Neptuneaswol/pathreview/blob/fix/64-sanitize-newline-injection/PLAN.md)
+
+**Walkthrough video (recommended):** Not recorded; this deliverable is optional and not graded.
+
+**Blockers or open questions:**
+The local development dependencies must be installed before the focused reproduction test and full unit suite can run. A repository-wide search also found no production caller of `PromptDefense`, so the planned fix remains scoped to `safety/prompt_defense.py` and `tests/unit/test_prompt_defense.py` unless maintainer guidance confirms that resume-pipeline integration is part of Issue #64.
