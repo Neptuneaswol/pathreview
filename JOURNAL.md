@@ -31,7 +31,7 @@ The setup and cohort-ledger boxes will be checked only after those external step
 
 ## Week 8 — Reproduction & solution planning
 
-**Reproduction commit link:** [Issue #64 reproduction commit](https://github.com/Neptuneaswol/pathreview/commit/REPLACE_WITH_REPRODUCTION_COMMIT_SHA)
+**Reproduction commit link:** [Issue #64 reproduction commit](https://github.com/Neptuneaswol/pathreview/commit/f5672aad71fbdbe16d9c60a8ede160b)
 
 **Reproduction summary:**
 I reproduced the issue by passing resume text containing `\n---\n` and `\nSystem:` prompt boundaries to `PromptDefense.sanitize()` in `safety/prompt_defense.py`. The returned text still contains both malicious newline sequences, confirming that detection recognizes these patterns but sanitization does not neutralize them.
