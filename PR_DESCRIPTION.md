@@ -6,7 +6,7 @@ This change fixes Issue #64 by neutralizing newline-based prompt boundaries in u
 
 ## Issue
 
-Closes [ascherj/pathreview#64](https://github.com/ascherj/pathreview/issues/64).
+Closes #64.
 
 ## Changes
 
@@ -25,7 +25,7 @@ Closes [ascherj/pathreview#64](https://github.com/ascherj/pathreview/issues/64).
 - [x] Black check passes on the changed Python files.
 - [x] Mypy passes on `safety/prompt_defense.py`.
 - [x] New and updated tests cover the change.
-- [ ] Integration tests are not applicable to this isolated sanitizer change.
+- [x] Integration tests are not applicable to this isolated sanitizer change.
 
 The repository-wide baseline still contains 180 unrelated Ruff findings, 52 files that Black would reformat, 104 mypy errors in 26 unrelated files, and 51 failed plus 31 errored unit tests outside prompt defense. The full unit run passes 360 tests, including all 46 prompt-defense tests, and this contribution introduces no new failures.
 
