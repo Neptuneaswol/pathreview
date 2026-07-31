@@ -80,6 +80,6 @@ I updated `tests/unit/test_prompt_defense.py` with regression coverage for every
 **Self-review confirmation:** [x] `make check` introduces no new failures  [x] `make test-unit` introduces no new failures
 
 **Validation details:**
-Ruff, Black, and mypy pass on the changed Python files. The repository-wide baseline remains 180 Ruff findings, 52 files requiring Black formatting, 104 mypy errors across 26 unrelated files, and 51 failed plus 31 errored unit tests outside prompt defense; 360 unit tests pass, including all 46 prompt-defense tests. This follows the Week 9 guidance that documented pre-existing failures count as passing when the contribution does not introduce new failures.
+Ruff, Black, and mypy pass on the changed Python files. The repository-wide baseline remains 180 Ruff findings, 52 files requiring Black formatting, 104 mypy errors across 26 unrelated files, and 51 failed plus 31 errored unit tests outside prompt defense; 360 unit tests pass, including all 46 prompt-defense tests. This follows the Week 9 guidance that documented pre-existing failures count as passing when the contribution does not introduce new failures. GitHub created the PR's CI workflow, but it is marked `action_required` with no jobs started because an upstream maintainer must approve workflows from this fork; this is an approval wait, not a test failure.
 
 **Draft PR feedback received from:** none

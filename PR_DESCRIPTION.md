@@ -29,6 +29,8 @@ Closes #64.
 
 The repository-wide baseline still contains 180 unrelated Ruff findings, 52 files that Black would reformat, 104 mypy errors in 26 unrelated files, and 51 failed plus 31 errored unit tests outside prompt defense. The full unit run passes 360 tests, including all 46 prompt-defense tests, and this contribution introduces no new failures.
 
+GitHub created the pull request's CI workflow, but it is currently marked `action_required` with no jobs started because an upstream maintainer must approve workflows from this fork. No CI test job has failed.
+
 ## Screenshots / Demo
 
 Not applicable; this is a backend sanitizer and unit-test change.
