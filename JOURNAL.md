@@ -63,7 +63,7 @@ The issue-specific implementation is not blocked. Repository-wide checks contain
 
 ### Check-in 2 (end of week)
 
-**PR link:** Not opened. At my direction, this work remains on my fork rather than being submitted as a pull request.
+**PR link:** [ascherj/pathreview#459](https://github.com/ascherj/pathreview/pull/459) — submitted and ready for review
 
 **Fork branch:** [fix/64-sanitize-newline-injection](https://github.com/Neptuneaswol/pathreview/tree/fix/64-sanitize-newline-injection)
 
